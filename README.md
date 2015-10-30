@@ -22,7 +22,7 @@ Go to `/apertureinstalldirectory/admin` for admin access. Default username is *a
 
 **Demo**
 
-http://aravindvs.com/aperture
+Checkout the front end demo here: http://aravindvs.com/aperture
 
 **Note**
 
