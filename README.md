@@ -1,5 +1,4 @@
 
-![enter image description here](http://aravindvs.com/aperture/aperture_git.png)
 
 **Aperture** is a minimal responsive album with a built in CMS for simplified image upload and management. Aperture was built in an hour for a friend of mine and later on I decided to make it public. Aperture uses simple PHP session for admin access.
 
