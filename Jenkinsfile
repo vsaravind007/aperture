@@ -19,6 +19,8 @@ pipeline {
             echo "Running DEV deploy"
           if(tag.contains("qa-"))
             echo "Running QA deploy"
+          else 
+            echo "Skipping deploment"
         }
       }
     }
