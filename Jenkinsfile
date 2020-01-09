@@ -1,5 +1,10 @@
 pipeline {
   agent any
+  script {
+    if (thing == true) {
+      def tag = sh(returnStdout: true, script: "git tag --contains | head -1").trim()
+    }
+  }
   stages {
     stage('Build') {
       steps {
@@ -11,18 +16,14 @@ pipeline {
         echo 'test'
       }
     }
-    def tag = sh(returnStdout: true, script: "git tag --contains | head -1").trim()
-    if (tag.contains("dev-")) {
-      stage("Deploy DEV") {
-        steps {
-          echo "Deploying to DEV Env"
+    stage("Deploy DEV") {
+      when {
+        expression {
+          tag.contains("dev-")
         }
       }
-    } else if (tag.contains("qa-")) {
-      stage("Deploy QA") {
-        steps {
-          echo "Deploying to QA Env"
-        }
+      steps {
+        echo "Deploying to DEV Env"
       }
     }
   }
