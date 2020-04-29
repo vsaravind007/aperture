@@ -19,9 +19,6 @@
 
 Go to `/apertureinstalldirectory/admin` for admin access. Default username is *admin*, password is *pass*
 
-**Demo**
-
-Checkout the front end demo here: http://aravindvs.com/aperture
 
 **Note**
 
